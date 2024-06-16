@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternative Files Uploader CC </title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://files.catbox.moe/an4ei3.png" type="image/x-icon">
+    <meta name="description" content="Upload files or provide URLs to get a shareable cjoint link. Easy file sharing made simple.">
+    <meta property="og:title" content="File Upload">
+    <meta property="og:description" content="Upload files or provide URLs to get a shareable cjoint link. Easy file sharing made simple.">
+    <meta property="og:image" content="https://files.catbox.moe/an4ei3.png">
+    <meta property="og:type" content="website">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="background">
+        <div id="intro">
+            <div class="container mt-5">
+                <h1 class="text-center">Upload File or Provide URL</h1>
+                <form id="upload-form" enctype="multipart/form-data" class="mt-4">
+                    <div class="form-group">
+                        <label for="file">Upload File:</label>
+                        <input type="file" class="form-control" id="file" name="file">
+                    </div>
+                    <div class="form-group">
+                        <label for="url">Or Enter URL:</label>
+                        <input type="text" class="form-control" id="url" name="url">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </form>
+                <div id="loading" class="spinner-border text-light" role="status" style="display: none;">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <div id="result" class="mt-4 text-center" style="display: none;">
+                    <button id="copy-button" class="btn btn-success">Copy Link</button>
+                    <p id="copy-success" class="text-success mt-2" style="display: none;">Link copied successfully!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
